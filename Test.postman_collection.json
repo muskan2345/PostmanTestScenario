@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "c1eda389-8cbb-47b0-a421-5d9201d2afaf",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://2factor.in/API/V1/2bddc4a5-61a1-11eb-8153-0200cd936042/SMS/9630816760/12345/TEST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://2factor.in/API/V1/2bddc4a5-61a1-11eb-8153-0200cd936042/SMS/9630816760/12345/TEST?content-type=application/json",
+					"protocol": "https",
+					"host": [
+						"2factor",
+						"in"
+					],
+					"path": [
+						"API",
+						"V1",
+						"2bddc4a5-61a1-11eb-8153-0200cd936042",
+						"SMS",
+						"9630816760",
+						"12345",
+						"TEST"
+					],
+					"query": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					]
+				},
+				"description": " 2 factor Authentication"
+			},
+			"response": []
+		}
+	]
+}
